@@ -1,0 +1,56 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: main
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/micheleartini/dnet-oai-server:
+      branch: main
+      repo: https://github.com/micheleartini/dnet-oai-server.git
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/micheleartini/dnet-oai-server git:
+        commands:
+        - /usr/bin/env sh .sqa/script.scaly-chocolate-skunk.sh
+        container: qc.acc_lousy-smalt-duck
+  QC.Doc:
+    repos:
+      github.com/micheleartini/dnet-oai-server find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.hazy-teal-squid.sh
+        container: qc.doc_goopy-linen-hyena
+      github.com/micheleartini/dnet-oai-server git:
+        commands:
+        - /usr/bin/env sh .sqa/script.droopy-dandelion-frog.sh
+        container: qc.doc_skanky-goldenrod-stingray
+      github.com/micheleartini/dnet-oai-server markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.cloudy-celadon-squid.sh
+        container: qc.doc_scanty-periwinkle-macaw
+  QC.Lic:
+    repos:
+      github.com/micheleartini/dnet-oai-server licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.skinny-zucchini-skunk.sh
+        container: qc.lic_dorky-chestnut-maltese
+  QC.Sty:
+    repos:
+      github.com/micheleartini/dnet-oai-server checkstyle:
+        commands:
+        - /usr/bin/env sh .sqa/script.snoopy-apricot-anteater.sh
+        container: qc.sty_flaky-scarlet-wombat
+      github.com/micheleartini/dnet-oai-server jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.skimpy-aquamarine-cow.sh
+        container: qc.sty_thirsty-flax-squid
+  QC.Ver:
+    repos:
+      github.com/micheleartini/dnet-oai-server get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.boozy-emerald-grasshopper.sh
+        container: qc.ver_dorky-linen-okapi
+timeout: 5400
