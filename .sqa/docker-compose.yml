@@ -1,5 +1,5 @@
 services:
-  qc.acc_lousy-smalt-duck:
+  qc.acc_crabby-pear-guppy:
     command: sleep 6000000
     image: bitnami/git:2.34.1
     volumes:
@@ -7,17 +7,7 @@ services:
       target: /sqaaas-build
       type: bind
     working_dir: /sqaaas-build
-  qc.doc_goopy-linen-hyena:
-    build:
-      context: ./github.com/EOSC-synergy/sqaaas-tooling/QC.Doc
-      dockerfile: Dockerfile
-    command: sleep 6000000
-    volumes:
-    - source: ./
-      target: /sqaaas-build
-      type: bind
-    working_dir: /sqaaas-build
-  qc.doc_scanty-periwinkle-macaw:
+  qc.doc_foggy-black-bandicoot:
     build:
       context: ./github.com/EOSC-synergy/sqaaas-tooling/QC.Doc/markdownlint
       dockerfile: Dockerfile
@@ -27,7 +17,17 @@ services:
       target: /sqaaas-build
       type: bind
     working_dir: /sqaaas-build
-  qc.doc_skanky-goldenrod-stingray:
+  qc.doc_shabby-tomato-caracal:
+    build:
+      context: ./github.com/EOSC-synergy/sqaaas-tooling/QC.Doc
+      dockerfile: Dockerfile
+    command: sleep 6000000
+    volumes:
+    - source: ./
+      target: /sqaaas-build
+      type: bind
+    working_dir: /sqaaas-build
+  qc.doc_wiggy-ruby-kangaroo:
     command: sleep 6000000
     image: bitnami/git:2.34.1
     volumes:
@@ -35,7 +35,7 @@ services:
       target: /sqaaas-build
       type: bind
     working_dir: /sqaaas-build
-  qc.lic_dorky-chestnut-maltese:
+  qc.lic_foggy-copper-devil:
     command: sleep 6000000
     image: eoscsynergy/sqaaas-licensee:9.17.0
     volumes:
@@ -43,7 +43,7 @@ services:
       target: /sqaaas-build
       type: bind
     working_dir: /sqaaas-build
-  qc.sty_flaky-scarlet-wombat:
+  qc.sty_flabby-russet-barb:
     command: sleep 6000000
     image: maven
     volumes:
@@ -51,7 +51,7 @@ services:
       target: /sqaaas-build
       type: bind
     working_dir: /sqaaas-build
-  qc.sty_thirsty-flax-squid:
+  qc.sty_pokey-chartreuse-mastiff:
     build:
       context: ./github.com/EOSC-synergy/sqaaas-tooling/QC.Sty/jsonlint
       dockerfile: Dockerfile
@@ -61,7 +61,7 @@ services:
       target: /sqaaas-build
       type: bind
     working_dir: /sqaaas-build
-  qc.ver_dorky-linen-okapi:
+  qc.ver_muzzy-silver-frog:
     build:
       context: ./github.com/EOSC-synergy/sqaaas-tooling/QC.Ver
       dockerfile: Dockerfile
