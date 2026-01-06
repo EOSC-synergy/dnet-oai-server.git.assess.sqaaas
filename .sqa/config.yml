@@ -15,42 +15,42 @@ sqa_criteria:
     repos:
       github.com/micheleartini/dnet-oai-server git:
         commands:
-        - /usr/bin/env sh .sqa/script.woozy-ecru-nightingale.sh
-        container: qc.acc_crabby-pear-guppy
+        - /usr/bin/env sh .sqa/script.droopy-amethyst-spoonbill.sh
+        container: qc.acc_homely-dandelion-eagle
   QC.Doc:
     repos:
       github.com/micheleartini/dnet-oai-server find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.tacky-purple-sheep.sh
-        container: qc.doc_shabby-tomato-caracal
+        - /usr/bin/env sh .sqa/script.stinky-cobalt-urchin.sh
+        container: qc.doc_clammy-gamboge-kudu
       github.com/micheleartini/dnet-oai-server git:
         commands:
-        - /usr/bin/env sh .sqa/script.lovely-celadon-kingfisher.sh
-        container: qc.doc_wiggy-ruby-kangaroo
+        - /usr/bin/env sh .sqa/script.bumpy-brass-oriole.sh
+        container: qc.doc_dorky-asparagus-javanese
       github.com/micheleartini/dnet-oai-server markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.homely-cerulean-termite.sh
-        container: qc.doc_foggy-black-bandicoot
+        - /usr/bin/env sh .sqa/script.greasy-cyan-opossum.sh
+        container: qc.doc_snoopy-gamboge-foxhound
   QC.Lic:
     repos:
       github.com/micheleartini/dnet-oai-server licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.skimpy-goldenrod-salamander.sh
-        container: qc.lic_foggy-copper-devil
+        - /usr/bin/env sh .sqa/script.scaly-blue-dog.sh
+        container: qc.lic_whiny-ecru-bracke
   QC.Sty:
     repos:
       github.com/micheleartini/dnet-oai-server checkstyle:
         commands:
-        - /usr/bin/env sh .sqa/script.surly-lavender-snail.sh
-        container: qc.sty_flabby-russet-barb
+        - /usr/bin/env sh .sqa/script.smelly-tomato-wolfhound.sh
+        container: qc.sty_pokey-aquamarine-eel
       github.com/micheleartini/dnet-oai-server jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.pokey-cobalt-eel.sh
-        container: qc.sty_pokey-chartreuse-mastiff
+        - /usr/bin/env sh .sqa/script.shaggy-ivory-elephant.sh
+        container: qc.sty_chewy-ecru-tapir
   QC.Ver:
     repos:
       github.com/micheleartini/dnet-oai-server get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.dorky-purple-beaver.sh
-        container: qc.ver_muzzy-silver-frog
+        - /usr/bin/env sh .sqa/script.skimpy-orange-termite.sh
+        container: qc.ver_surly-ecru-chin
 timeout: 5400
